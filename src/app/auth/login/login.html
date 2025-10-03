@@ -1,0 +1,19 @@
+<div class="container">
+  <h2>Login</h2>
+  <form (ngSubmit)="onSubmit()">
+    <input type="text" [(ngModel)]="username" name="username" placeholder="Username" required>
+    <input type="password" [(ngModel)]="password" name="password" placeholder="Password" required>
+    <button type="submit">Login</button>
+  </form>
+
+  <p>Forgot password?</p>
+  <form (ngSubmit)="ForgotPassword()">
+    <button type="submit">forgot password</button>
+  </form>
+
+  <p>Don’t have an account?</p>
+  <form (ngSubmit)="Register()">
+    <button type="submit">Register</button>
+  </form>
+  <div id="message">{{ message }}</div>
+</div>

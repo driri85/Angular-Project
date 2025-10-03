@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Articles</h2>
+  <button (click)="createNewArticle()">Create New Article</button>
+
+  <div *ngIf="message" class="message">{{ message }}</div>
+
+  <ul>
+    <li *ngFor="let article of articles" (click)="goToArticle(article.id)" class="article-item">
+      <img [src]="article.imgPath" alt="{{ article.title }}" class="article-img">
+      <div class="article-content">
+        <h3>{{ article.title }}</h3>
+        <p>{{ article.desc | slice:0:100 }}...</p>
+        <small>By {{ article.author }}</small>
+      </div>
+    </li>
+  </ul>
+</div>

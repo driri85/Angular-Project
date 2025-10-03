@@ -1,0 +1,18 @@
+<div class="container" *ngIf="article; else errorTpl">
+  <button (click)="goBack()">← Back to Articles</button>
+
+  <h2>{{ article.title }}</h2>
+  <img [src]="article.imgPath" alt="{{ article.title }}" class="article-img">
+  <p>{{ article.desc }}</p>
+  <small>By {{ article.author }}</small>
+
+  <div class="actions">
+    <button (click)="modifyArticle()">Modify</button>
+    <button (click)="deleteArticle()" class="delete">Delete</button>
+  </div>
+</div>
+
+<ng-template #errorTpl>
+  <div class="message">{{ message }}</div>
+  <button (click)="goBack()">← Back to Articles</button>
+</ng-template>

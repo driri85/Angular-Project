@@ -1,0 +1,19 @@
+<div class="container">
+<h2>Register</h2>
+<form (ngSubmit)="onSubmit()">
+    <input type="text" id="username" placeholder="Username" required>
+    <input type="password" id="password" placeholder="Password" required>
+    <input type="password" id="passwordConfirm" placeholder="Password Confirmation" required>
+    <input type="text" id="pseudo" placeholder="Name" required>
+    <input type="text" id="cityCode" placeholder="cityCode" required>
+    <input type="text" id="city" placeholder="city" required>
+    <input type="text" id="phone" placeholder="phone" required>
+    <button type="submit">Register</button>
+</form>
+
+<p>Don’t have an account?</p>
+<form (ngSubmit)="Login()">
+    <button type="submit">Login</button>
+  </form>
+<div id="message"></div>
+</div>
