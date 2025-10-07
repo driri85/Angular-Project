@@ -1,19 +1,20 @@
 <div class="container">
-<h2>Register</h2>
-<form (ngSubmit)="onSubmit()">
-    <input type="text" id="username" placeholder="Username" required>
-    <input type="password" id="password" placeholder="Password" required>
-    <input type="password" id="passwordConfirm" placeholder="Password Confirmation" required>
-    <input type="text" id="pseudo" placeholder="Name" required>
-    <input type="text" id="cityCode" placeholder="cityCode" required>
-    <input type="text" id="city" placeholder="city" required>
-    <input type="text" id="phone" placeholder="phone" required>
-    <button type="submit">Register</button>
-</form>
-
-<p>Don’t have an account?</p>
-<form (ngSubmit)="Login()">
-    <button type="submit">Login</button>
+  <h2>Register</h2>
+  <form (ngSubmit)="onSubmit()">
+      <input type="text" placeholder="Email" required [(ngModel)]="email" name="email">
+      <input type="password" placeholder="Password" required [(ngModel)]="password" name="password">
+      <input type="password" placeholder="Password Confirmation" required [(ngModel)]="passwordConfirm" name="passwordConfirm">
+      <input type="text" placeholder="Pseudo" required [(ngModel)]="pseudo" name="pseudo">
+      <input type="text" placeholder="City Code" required [(ngModel)]="cityCode" name="cityCode">
+      <input type="text" placeholder="City" required [(ngModel)]="city" name="city">
+      <input type="text" placeholder="Phone" required [(ngModel)]="phone" name="phone">
+      <button type="submit">Register</button>
   </form>
-<div id="message"></div>
+
+  <p>Already have an account?</p>
+  <form (ngSubmit)="Login()">
+      <button type="submit">Login</button>
+  </form>
+
+  <div id="message">{{ message }}</div>
 </div>
